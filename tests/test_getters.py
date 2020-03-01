@@ -168,24 +168,24 @@ class TestGetters(BaseTestCase):
         result = MoviesPeopleGetter._get_movies()
         self.assertEqual(result, {})
 
-    @patch('service_api.services.movies_getter.MoviesGetter._get_people')
-    @patch('service_api.services.movies_getter.MoviesGetter._get_movies')
+    @patch('service_api.services.movies_getter.MoviesPeopleGetter._get_people')
+    @patch('service_api.services.movies_getter.MoviesPeopleGetter._get_movies')
     def test_get_movies_with_peoples(self, movies, people):
         movies.return_value = {m['id']: m for m in MOVIES_DATA}
         people.return_value = PEOPLE_DATA
         response = MoviesPeopleGetter.get_movies_with_characters()
         self.assertEqual(response, MOVIES_WITH_PEOPLE_DATA)
 
-    @patch('service_api.services.movies_getter.MoviesGetter._get_people')
-    @patch('service_api.services.movies_getter.MoviesGetter._get_movies')
+    @patch('service_api.services.movies_getter.MoviesPeopleGetter._get_people')
+    @patch('service_api.services.movies_getter.MoviesPeopleGetter._get_movies')
     def test_get_movies_with_peoples_no_movies(self, movies, people):
         movies.return_value = {}
         people.return_value = PEOPLE_DATA
         response = MoviesPeopleGetter.get_movies_with_characters()
         self.assertEqual(response, [])
 
-    @patch('service_api.services.movies_getter.MoviesGetter._get_people')
-    @patch('service_api.services.movies_getter.MoviesGetter._get_movies')
+    @patch('service_api.services.movies_getter.MoviesPeopleGetter._get_people')
+    @patch('service_api.services.movies_getter.MoviesPeopleGetter._get_movies')
     def test_get_movies_with_peoples_no_people(self, movies, people):
         movies.return_value = {m['id']: m for m in MOVIES_DATA}
         people.return_value = []
