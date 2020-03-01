@@ -1,0 +1,5 @@
+flask
+flask-script
+requests
+flask-caching
+pytest

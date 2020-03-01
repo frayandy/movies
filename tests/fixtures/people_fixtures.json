@@ -1,0 +1,5 @@
+[
+  {"id": "1", "name": "John", "gender": "Smith", "age": "99", "eye_color": "Any", "hair_color": "Any"},
+  {"id": "2", "name": "Luke", "gender": "Skywalker", "age": "20", "eye_color": "Any", "hair_color": "Any"},
+  {"id": "3", "name": "Darth", "gender": "Wader", "age": "21", "eye_color": "No", "hair_color": "No"}
+]

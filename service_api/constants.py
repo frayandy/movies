@@ -1,0 +1,10 @@
+BASE_GHIBLI_URI = 'https://ghibliapi.herokuapp.com'
+FILMS_KEY = 'films'
+PEOPLE_KEY = 'people'
+
+PEOPLE_GHIBLI_URI = '/'.join([BASE_GHIBLI_URI, PEOPLE_KEY])
+MOVIES_GHIBLI_URI = '/'.join([BASE_GHIBLI_URI, FILMS_KEY])
+
+CACHE_TIMEOUT = 60
+
+MOVIES_PEOPLE_WORKERS_COUNT = 2

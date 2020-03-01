@@ -1,0 +1,15 @@
+.idea
+venv
+.python-version
+*.pyc
+*.egg-info
+*.swp
+*.egg
+.pyre/
+.pytest_cache/
+*.cache
+*.log
+config.status
+configure
+celerybeat-schedule
+.DS_Store
